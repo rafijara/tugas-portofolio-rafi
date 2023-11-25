@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+    <div class="hero-header" id="home">
+        <nav class="fixed-top" id="navbar">
+            <div class="wrapper">
+                <header>
+                    <div class="logo">
+                        <i class="fa-solid fa-a"></i>
+                        <div class="logo-text">Rafi JM</div>
+                    </div>
+                    <nav>
+                        <div class="togglebtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="navlinks">
+                            <li><a href="#home" data-scroll>Home</a></li>
+                            <li><a href="#about" data-scroll>About</a></li>
+                            <li><a href="#project" data-scroll>Project</a></li>
+                            <li><a href="#contact" data-scroll>Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </nav>
+
+        <div class="container mt-5 pt-5" id="home">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="hero-pic">
+                        <img src="rafi.jpg" alt="profile pic" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hero-text">
+                        <h5>Hai, saya <span class="input"></span></h5>
+                        <h1>Rafi Jara Mutiar</h1>
+                        <p>Tugas Portofolio dari mapel jurusan website saya</p>
+                        <div class="social">
+                            <a href="https://instagram.com/kenziee_zd?igshid=MzMyNGUyNmU2YQ==" class="btn btn-social" title="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@_rafijaramutiar_?_t=8hUZCyImfRq&_r=1" class="btn btn-social" title="tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://open.spotify.com/playlist/7s0915g7Gv1noaA5EKe1gs?si=1xupSVThSQS78m4kINKZrQ&utm_source=copy-link" class="btn btn-social" title="spotify" target="_blank"><i class="fab fa-spotify"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!---Typed.js for typing text effect-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+<script>
+    // Creating button click show/hide navbar 
+    var togglebtn = document.querySelector(".togglebtn");
+    var nav = document.querySelector(".navlinks");
+
+    togglebtn.addEventListener("click", function () {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+    });
+
+    var typed = new Typed(".input", {
+        strings: ["SISWA", "XI", "RPL 1", "SMKN 1 KARAWANG"],
+        typeSpeed: 70,
+        backSpeed: 55,
+        loop: true
+    });
+
+    // Adding click event to social buttons
+    var socialButtons = document.querySelectorAll('.btn-social');
+
+    socialButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        var url = this.getAttribute('href');
+        window.open(url, '_blank');
+        console.log("Button clicked");
+    });
+});
+
+</script>
+
+        <div class="container mt-5 pt-5" id="about">
+            <div class="row">
+                <div class="img-container">
+                    <img src="kenziee.jpg" alt="Tentang Gambar" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <h2 class="mb-4">Rafi Jara Mutiar</h2>
+                        <h5>Saya kelas <span>XI RPL 1</span></h5>
+                        <p>Saya lahir di Karawang, anak ke-2 dari 3 bersaudara. Saya lahir pada tanggal 02 Juni 2007. Saya sekolah di SMKN 1 KARAWANG.</p>
+                        <a href="#" class="btn btn-primary">Hire Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects" id="project">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="download.jpg" alt="Project 1">
+                        <h4>Project form</h4>
+                        <p><a href="https://rafijara.github.io/tugas-pwb-pakjum/">Description of Project 1</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="download2.jpg" alt="Project 2">
+                        <h4>Project CSS</h4>
+                        <p><a href="https://rafijara.github.io/tugas-css/">Description of Project 2</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="download3.jpg" alt="Project 3">
+                        <h4>Project bootstrap</h4>
+                        <p><a href="https://rafijara.github.io/Tugas-bostrap2/">Description of Project 3</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="#" class="btn">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me for any inquiries or collaborations.</p>
+
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/mleyydka" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <!-- Thank You Message -->
+            <div class="thank-you-message" id="thankYouMessage">
+                <h3>Thank you for visiting my portfolio!</h3>
+                <p>Your message has been received. I'll get back to you as soon as possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
